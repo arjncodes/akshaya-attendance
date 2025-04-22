@@ -483,6 +483,9 @@
             empTimeElement.textContent = new Date(data.timestamp).toLocaleTimeString();
             
             employeeDetails.classList.remove('hidden');
+
+            // Auto-scroll to the employee details section with smooth animation
+            employeeDetails.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
         
         // Display status message
@@ -506,7 +509,7 @@
                     clearInterval(countdownInterval);
                     resetScanner();
                 }
-            }, 1000);
+            }, 3000);
         }
         
         // Reset scanner for next employee
